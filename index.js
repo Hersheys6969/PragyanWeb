@@ -84,7 +84,6 @@ function animate() {
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  earthGroup.position.x += -50;
   camera.position.z = t * -0.005;
   //camera.position.x = t * -0.0002;
   //camera.rotation.y = t * -0.0002;
