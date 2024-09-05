@@ -8,7 +8,7 @@ const w = window.innerWidth;
 const h = window.innerHeight;
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000);
-camera.position.y=50;
+camera.position.y=25;
 camera.position.z = 50;
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
@@ -84,10 +84,10 @@ function animate() {
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  earthGroup.position.x += -50;
+  //earthGroup.position.x += -50;
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
-  camera.rotation.y = t * -0.0002;
+  //camera.rotation.y = t * -0.0002;
 }
 document.body.onscroll = moveCamera;
 moveCamera();
