@@ -36,7 +36,6 @@ const material = new THREE.MeshPhongMaterial({
 // material.map.colorSpace = THREE.SRGBColorSpace;
 const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
-earthGroup.position.x = -50;
 
 const lightsMat = new THREE.MeshBasicMaterial({
   map: loader.load("./textures/03_earthlights1k.jpg"),
@@ -61,6 +60,8 @@ const fresnelMat = getFresnelMat();
 const glowMesh = new THREE.Mesh(geometry, fresnelMat);
 glowMesh.scale.setScalar(1.01);
 earthGroup.add(glowMesh);
+
+earthGroup.position.x = -50;
 
 const stars = getStarfield({numStars: 2000});
 scene.add(stars);
