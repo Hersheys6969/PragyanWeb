@@ -29,7 +29,7 @@ scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 const detail = 12;
 const loader = new THREE.TextureLoader();
-const geometry = new THREE.IcosahedronGeometry(50, detail);
+const geometry = new THREE.IcosahedronGeometry(100, detail);
 const material = new THREE.MeshPhongMaterial({
   map: loader.load("./textures/00_earthmap1k.jpg"),
   specularMap: loader.load("./textures/02_earthspec1k.jpg"),
