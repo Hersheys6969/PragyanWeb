@@ -29,7 +29,7 @@ scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 const detail = 12;
 const loader = new THREE.TextureLoader();
-const geometry = new THREE.IcosahedronGeometry(100, detail);
+const geometry = new THREE.IcosahedronGeometry(500, detail);
 const material = new THREE.MeshPhongMaterial({
   map: loader.load("./textures/00_earthmap1k.jpg"),
   specularMap: loader.load("./textures/02_earthspec1k.jpg"),
@@ -84,7 +84,7 @@ function animate() {
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  //earthGroup.position.x += -50;
+  earthGroup.position.x += -50;
   camera.position.z = t * -0.01;
   //camera.position.x = t * -0.0002;
   //camera.rotation.y = t * -0.0002;
