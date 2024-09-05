@@ -36,7 +36,7 @@ const material = new THREE.MeshPhongMaterial({
 // material.map.colorSpace = THREE.SRGBColorSpace;
 const earthMesh = new THREE.Mesh(geometry, material);
 earthGroup.add(earthMesh);
-//earthGroup.position.x = -50;
+earthGroup.position.x = -50;
 
 const lightsMat = new THREE.MeshBasicMaterial({
   map: loader.load("./textures/03_earthlights1k.jpg"),
@@ -79,7 +79,7 @@ function animate() {
   stars.rotation.y -= 0.0002;
   renderer.render(scene, camera);
 }
-/*
+
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   camera.position.z = t * -0.01;
@@ -88,7 +88,7 @@ function moveCamera() {
 }
 document.body.onscroll = moveCamera;
 moveCamera();
-*/
+
 animate();
 
 function handleWindowResize () {
