@@ -61,7 +61,7 @@ const glowMesh = new THREE.Mesh(geometry, fresnelMat);
 glowMesh.scale.setScalar(1.01);
 earthGroup.add(glowMesh);
 
-earthGroup.position.x = -50;
+earthGroup.position.x += -50;
 
 const stars = getStarfield({numStars: 2000});
 scene.add(stars);
