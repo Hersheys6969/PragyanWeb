@@ -79,7 +79,7 @@ function animate() {
   stars.rotation.y -= 0.0002;
   renderer.render(scene, camera);
 }
-
+/*
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
   camera.position.z = t * -0.01;
@@ -88,7 +88,7 @@ function moveCamera() {
 }
 document.body.onscroll = moveCamera;
 moveCamera();
-
+*/
 animate();
 
 function handleWindowResize () {
