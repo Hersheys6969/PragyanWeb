@@ -8,8 +8,8 @@ const w = window.innerWidth;
 const h = window.innerHeight;
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000);
-camera.position.y=10;
-camera.position.z=-10;
+camera.position.y=5;
+camera.position.z=-20;
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
@@ -29,7 +29,7 @@ scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 const detail = 12;
 const loader = new THREE.TextureLoader();
-const geometry = new THREE.IcosahedronGeometry(20, detail);
+const geometry = new THREE.IcosahedronGeometry(5, detail);
 const material = new THREE.MeshPhongMaterial({
   map: loader.load("./textures/00_earthmap1k.jpg"),
   specularMap: loader.load("./textures/02_earthspec1k.jpg"),
