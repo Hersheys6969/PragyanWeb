@@ -61,8 +61,6 @@ const glowMesh = new THREE.Mesh(geometry, fresnelMat);
 glowMesh.scale.setScalar(1.01);
 earthGroup.add(glowMesh);
 
-earthGroup.position.x += -50;
-
 const stars = getStarfield({numStars: 2000});
 scene.add(stars);
 
@@ -83,6 +81,7 @@ function animate() {
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
+  earthGroup.position.x += -50;
   camera.position.z = t * -0.01;
   camera.position.x = t * -0.0002;
   camera.rotation.y = t * -0.0002;
