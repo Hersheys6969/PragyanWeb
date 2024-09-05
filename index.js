@@ -79,13 +79,13 @@ function animate() {
   lightsMesh.rotation.y += 0.002;
   cloudsMesh.rotation.y += 0.0023;
   glowMesh.rotation.y += 0.002;
-  stars.rotation.y -= 0.0002;
+  stars.rotation.y -= 0.0001;
   renderer.render(scene, camera);
 }
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  camera.position.z = t * -0.01;
+  camera.position.z = t * -0.001;
   //camera.position.x = t * -0.0002;
   //camera.rotation.y = t * -0.0002;
 }
