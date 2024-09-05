@@ -20,7 +20,7 @@ renderer.toneMapping = THREE.ACESFilmicToneMapping;
 renderer.outputColorSpace = THREE.LinearSRGBColorSpace;
 
 //GRID
-const gridHelper = new THREE.GridHelper(200, 50);
+const gridHelper = new THREE.GridHelper(100, 100);
 scene.add(gridHelper);
 
 const earthGroup = new THREE.Group();
@@ -29,7 +29,7 @@ scene.add(earthGroup);
 new OrbitControls(camera, renderer.domElement);
 const detail = 12;
 const loader = new THREE.TextureLoader();
-const geometry = new THREE.IcosahedronGeometry(500, detail);
+const geometry = new THREE.IcosahedronGeometry(20, detail);
 const material = new THREE.MeshPhongMaterial({
   map: loader.load("./textures/00_earthmap1k.jpg"),
   specularMap: loader.load("./textures/02_earthspec1k.jpg"),
