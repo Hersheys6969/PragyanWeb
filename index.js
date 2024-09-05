@@ -8,8 +8,6 @@ const w = window.innerWidth;
 const h = window.innerHeight;
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, w / h, 0.1, 1000);
-camera.position.y=50;
-camera.position.z=-100;
 const renderer = new THREE.WebGLRenderer({
   canvas: document.querySelector('#bg'),
 });
@@ -70,6 +68,9 @@ scene.add(stars);
 const sunLight = new THREE.DirectionalLight(0xffffff, 2.0);
 sunLight.position.set(-2, 0.5, 1.5);
 scene.add(sunLight);
+
+camera.position.y=50;
+camera.position.z=-100;
 
 function animate() {
   requestAnimationFrame(animate);
