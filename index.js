@@ -70,7 +70,7 @@ sunLight.position.set(-2, 0.5, 1.5);
 scene.add(sunLight);
 
 camera.position.y=10;
-camera.position.z=-50;
+camera.position.z=50;
 
 function animate() {
   requestAnimationFrame(animate);
@@ -85,7 +85,7 @@ function animate() {
 
 function moveCamera() {
   const t = document.body.getBoundingClientRect().top;
-  camera.position.z = t * -0.01;
+  camera.position.z = t * -0.1;
   //camera.position.x = t * -0.0002;
   //camera.rotation.y = t * -0.0002;
 }
